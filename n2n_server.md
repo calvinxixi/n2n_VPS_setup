@@ -117,7 +117,7 @@ cp supernode.conf.sample supernode.conf
 sudo vim supernode.conf 
 ```
 
-![img](photo\supernode.conf)
+![img](photo\e69390ad4d0fa557497b393a174d4d93f64e03cf.png@1256w_648h_!web-article-pic.avif)
 
 -p后数字改成想要使用的端口并保存
 
@@ -132,7 +132,7 @@ sudo systemctl restart supernode # 重启
 sudo systemctl stop supernode # 关闭 
 ```
 
-![img](photo\status)
+![img](photo\136496189dbf6035179f4efad46db11999abff99.png@1256w_296h_!web-article-pic.avif)
 
 这样子就是正常启动了
 
