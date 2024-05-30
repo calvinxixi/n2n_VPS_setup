@@ -92,6 +92,26 @@
    # 把PermitRootLogin 后续改成 Yes
    service ssh restar
    ```
+   
+   ## Bitvise密钥登录Linux服务器
+   
+   某些VPS商家，例如AWS、Google、[DMIT](https://www.dmit.io/aff.php?aff=1062)等，默认禁用了密码登录，此时需要使用密钥登录到服务器。
+   
+   密钥登录的操作与密码登录流程基本一致，除了第二步有以下不同：
+   
+   1. 首先我们要导入密钥。操作为：点击主界面上的Client key manager，然后点击“Import”，选择密钥文件，点击“打开”，最后在弹出来的框中选择Import：
+   
+   [![Bitvise导入密钥](https://v2xtls.org/wp-content/uploads/2020/11/Bitvise%E5%AF%BC%E5%85%A5%E5%AF%86%E9%92%A5-1024x577-1.jpg)](https://v2xtls.org/wp-content/uploads/2020/11/Bitvise导入密钥-1024x577-1.jpg)
+   
+   Bitvise导入密钥
+   
+   2. 登录信息的Initial method选“publickey”，Client key选刚才导入的密钥文件：
+   
+   [![Bitvise导入密钥](https://v2xtls.org/wp-content/uploads/2020/11/Bitvise%E5%AF%BC%E5%85%A5%E5%AF%86%E9%92%A5-1-1024x577-1.jpg)](https://v2xtls.org/wp-content/uploads/2020/11/Bitvise导入密钥-1-1024x577-1.jpg)
+   
+   Bitvise导入密钥
+   
+   接下来的操作和步骤请参考上面的密码登录。
 
 ## 4.安装小黄鸭服务器
 
@@ -132,7 +152,7 @@ sudo systemctl restart supernode # 重启
 sudo systemctl stop supernode # 关闭 
 ```
 
-![img](photo\136496189dbf6035179f4efad46db11999abff99.png@1256w_296h_!web-article-pic.avif)
+![spsp](photo\136496189dbf6035179f4efad46db11999abff99.png@1256w_296h_!web-article-pic.avif)
 
 这样子就是正常启动了
 
@@ -157,7 +177,7 @@ sudo systemctl start supernode
 给rc.local可执行权限
 
 ```bash
-sudo chmod 777 rc.local
+sudo chmod 777 /etc/rc.local
 ```
 
 建立软连接
